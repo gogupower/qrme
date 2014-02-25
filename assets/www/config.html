@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+  	<link rel="stylesheet" href="css/layouts/pure-min.css">
+
+	<link rel="stylesheet" href="css/layouts/side-menu.css">
+	
+    <title>Menu Button Example</title>
+
+    
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("menubutton", onMenuKeyDown, false);
+    }
+
+    // show alerts
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'O botao foi pressionado',  // message
+            alertDismissed,         // callback
+            'Deu certo',            // title
+            'Ok'                  // buttonName
+        );
+    }
+
+    // Handle the menu button
+    //
+    function onMenuKeyDown() {
+		Alert("teste");
+    }
+
+    </script>
+  </head>
+  <body onload="onLoad()">
+  	<p>Teste de button</p>
+  </body>
+</html>
